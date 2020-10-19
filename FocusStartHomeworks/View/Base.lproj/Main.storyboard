@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fP4-1R-uD5">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FocusStartHomeworks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SyW-Pu-yl7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SyW-Pu-yl7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EAT-Ca-MQl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SyW-Pu-yl7" secondAttribute="bottom" id="PRY-Ze-bmE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SyW-Pu-yl7" secondAttribute="trailing" id="X43-Vx-2NW"/>
+                            <constraint firstItem="SyW-Pu-yl7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gdr-33-Uoy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3CX-bA-gSt">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="j6R-lI-gNH">
+                            <connections>
+                                <action selector="tapCarEditVC:" destination="BYZ-38-t0r" id="gwF-NR-UWe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="SyW-Pu-yl7" id="syV-ZR-j0W"/>
+                        <segue destination="TCa-40-7QF" kind="show" id="Kc7-iw-AEt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="89"/>
+        </scene>
+        <!--Edit Car View Controller-->
+        <scene sceneID="FaG-mg-fle">
+            <objects>
+                <viewController storyboardIdentifier="EditCarViewController" id="TCa-40-7QF" customClass="EditCarViewController" customModule="FocusStartHomeworks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yd0-cW-z68">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Марка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfw-mv-Bx7">
+                                <rect key="frame" x="58" y="104" width="298" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="3PQ-VY-dV1"/>
+                                    <constraint firstAttribute="width" constant="298" id="k8V-hU-TJD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Модель" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-wx-zfj">
+                                <rect key="frame" x="59" y="143" width="296" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="EUe-TI-u5x"/>
+                                    <constraint firstAttribute="height" constant="34" id="v5h-wq-rHD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Год выпуска" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFg-pO-TSC">
+                                <rect key="frame" x="59" y="291" width="296" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Wop-J8-t9z"/>
+                                    <constraint firstAttribute="width" constant="296" id="xvn-7f-OeQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-T8-hAd">
+                                <rect key="frame" x="155" y="388" width="104" height="38"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtn:" destination="TCa-40-7QF" eventType="touchUpInside" id="jC4-Fh-AY2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Гос номер" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHN-2R-qe8">
+                                <rect key="frame" x="59" y="330" width="296" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="ZDV-6l-Emd"/>
+                                    <constraint firstAttribute="height" constant="34" id="o6i-4B-BfT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAC-Fp-KT9">
+                                <rect key="frame" x="57" y="183" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DGW-dj-Q45"/>
+                                    <constraint firstAttribute="height" constant="100" id="FAu-pj-pRt"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SUg-tB-Uh2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UAC-Fp-KT9" firstAttribute="centerX" secondItem="SUg-tB-Uh2" secondAttribute="centerX" id="3wn-FG-vua"/>
+                            <constraint firstItem="uL7-T8-hAd" firstAttribute="centerX" secondItem="yd0-cW-z68" secondAttribute="centerX" id="4de-Jp-WfJ"/>
+                            <constraint firstItem="cqM-wx-zfj" firstAttribute="top" secondItem="dfw-mv-Bx7" secondAttribute="bottom" constant="5" id="4hR-TG-0ag"/>
+                            <constraint firstItem="uL7-T8-hAd" firstAttribute="top" secondItem="nHN-2R-qe8" secondAttribute="bottom" constant="24" id="7yM-ON-bHY"/>
+                            <constraint firstItem="cqM-wx-zfj" firstAttribute="centerX" secondItem="yd0-cW-z68" secondAttribute="centerX" id="Dhv-vt-gKd"/>
+                            <constraint firstItem="EFg-pO-TSC" firstAttribute="top" secondItem="UAC-Fp-KT9" secondAttribute="bottom" constant="8" id="N1N-BC-3qx"/>
+                            <constraint firstItem="dfw-mv-Bx7" firstAttribute="centerX" secondItem="yd0-cW-z68" secondAttribute="centerX" id="P91-CB-sul"/>
+                            <constraint firstItem="nHN-2R-qe8" firstAttribute="centerX" secondItem="yd0-cW-z68" secondAttribute="centerX" id="WtL-Zd-4pX"/>
+                            <constraint firstItem="dfw-mv-Bx7" firstAttribute="top" secondItem="SUg-tB-Uh2" secondAttribute="top" constant="60" id="bik-Qv-9UH"/>
+                            <constraint firstItem="nHN-2R-qe8" firstAttribute="top" secondItem="EFg-pO-TSC" secondAttribute="bottom" constant="5" id="ghe-ua-tWz"/>
+                            <constraint firstItem="EFg-pO-TSC" firstAttribute="centerX" secondItem="yd0-cW-z68" secondAttribute="centerX" id="hOi-eE-wT8"/>
+                            <constraint firstItem="UAC-Fp-KT9" firstAttribute="top" secondItem="cqM-wx-zfj" secondAttribute="bottom" constant="6" id="pxN-pa-cGa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z3H-Yt-BHY"/>
+                    <connections>
+                        <outlet property="carNumberText" destination="nHN-2R-qe8" id="h1K-cA-OV4"/>
+                        <outlet property="manufacturerText" destination="dfw-mv-Bx7" id="UjG-Rp-gyu"/>
+                        <outlet property="modelText" destination="cqM-wx-zfj" id="Tjw-dk-mTi"/>
+                        <outlet property="typePikerView" destination="UAC-Fp-KT9" id="1Ja-LH-wfO"/>
+                        <outlet property="yearOfIssueText" destination="EFg-pO-TSC" id="4pk-Ef-DBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bj2-3L-gLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="89"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oPw-os-8M8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fP4-1R-uD5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1JW-j5-17C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ilj-FJ-d7y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FwR-6i-33t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="88.858695652173921"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FocusStartHomeworks
 //
-//  Created by Mikhail Danilov on 17.10.2020.
+//  Created by Mikhail Danilov on 18.10.2020.
 //
 
 import UIKit
