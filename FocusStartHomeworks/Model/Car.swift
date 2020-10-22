@@ -8,30 +8,29 @@
 import Foundation
 
 enum Body: String {
-    case none = "none"
-    case sedan = "sedan"
-    case universal = "universal"
-    case jeep = "jeep"
-    case cupe = "cupe"
+    case none
+    case sedan
+    case universal
+    case jeep
+    case cupe
 }
 
-class Car{
-    var manufacturer: String = ""
-    var model: String = ""
-    var body: Body?
-    var yearOfIssue: Int = 0
-    var carNumber: String = ""
+struct Car {
+    var manufacturer: String
+    var model: String
+    var body: Body
+    var yearOfIssue: Int
+    var carNumber: String
     
-    
-    init(manufacturer: String,
-         model: String,
-         body: Body,
-         yearOfIssue: Int,
-         carNumber: String) {
-        self.yearOfIssue = yearOfIssue
-        self.manufacturer = manufacturer
-        self.model = model
-        self.body = body
-        self.carNumber = carNumber
-    }
+//    init(manufacturer: String,
+//         model: String,
+//         body: Body,
+//         yearOfIssue: Int,
+//         carNumber: String) {
+//        self.yearOfIssue = yearOfIssue
+//        self.manufacturer = manufacturer
+//        self.model = model
+//        self.body = body
+//        self.carNumber = carNumber
+//    }
 }

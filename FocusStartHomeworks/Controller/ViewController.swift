@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var cars: [Car] = []
+    var cars: [Car]?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,36 +32,46 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cars.count
+        print("cars?.count>",cars?.count)
+        return cars?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let car = cars[indexPath.row]
-        let type = car.body?.rawValue ?? ""
-        var title = car.manufacturer + " " + car.model + " " + type
-        
-        if car.yearOfIssue == 0 {
-            title = title + " -"
-        } else {
-            title = title + " " + String(car.yearOfIssue)
+        if let car = cars?[indexPath.row] {
+            print("car.model>", car.model)
+            let type = car.body.rawValue
+            var title = car.manufacturer + " " + car.model + " " + type
+            
+            if car.yearOfIssue == 0 {
+                title = title + " -"
+            } else {
+                title = title + " " + String(car.yearOfIssue)
+            }
+            if car.carNumber.count != 0 {
+                title = title + " " + car.carNumber
+            }
+            cell.textLabel?.text = title
         }
-        if car.carNumber.count != 0 {
-            title = title + " " + car.carNumber
-        }
         
-        cell.textLabel?.text = title
+        
         return cell
     }
 }
 
 extension ViewController: EditCarViewControllerDelegate {
     func reloadData() {
+        print(#function)
         tableView.reloadData()
     }
     
     func addNewCar(car: Car) {
-        cars.append(car)
+        print(#function)
+        if cars == nil {
+            cars = [car]
+        } else {
+            cars?.append(car)
+        }
         tableView.reloadData()
     }
 }

@@ -23,19 +23,20 @@ class EditCarViewController: UIViewController {
     var car: Car?
     var delegate: EditCarViewControllerDelegate?
     
-    var typs:[String] = ["Выберите тип кузова", Body.none.rawValue, Body.jeep.rawValue, Body.sedan.rawValue, Body.cupe.rawValue, Body.universal.rawValue]
+    var typs: [String] = ["Выберите тип кузова", Body.none.rawValue, Body.jeep.rawValue, Body.sedan.rawValue, Body.cupe.rawValue, Body.universal.rawValue]
+    
     var selectType = Body.none
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let car = car {
-            manufacturerText.text = car.manufacturer
-            modelText.text = car.model
-//            bodyText.text = car.body
-            yearOfIssueText.text = String(car.yearOfIssue)
-            carNumberText.text = car.carNumber
-        }
+//        if let car = car {
+//            manufacturerText.text = car.manufacturer
+//            modelText.text = car.model
+////            bodyText.text = car.body
+//            yearOfIssueText.text = String(car.yearOfIssue)
+//            carNumberText.text = car.carNumber
+//        }
         
         
         typePikerView.delegate = self
@@ -43,12 +44,13 @@ class EditCarViewController: UIViewController {
     }
     
     @IBAction func saveBtn(_ sender: Any) {
-        let manufacturer = manufacturerText.text ?? ""
-        let model = modelText.text ?? ""
-        let yearOfIssue: Int = Int(yearOfIssueText.text ?? "0") ?? 0
-        let cardNumber = carNumberText.text ?? ""
-        
+
         if selectType != .none {
+            let manufacturer = manufacturerText.text ?? ""
+            let model = modelText.text ?? ""
+            let yearOfIssue: Int = Int(yearOfIssueText.text ?? "0") ?? 0
+            let cardNumber = carNumberText.text ?? ""
+            
             let newCar = Car(manufacturer: manufacturer, model: model, body: selectType, yearOfIssue: yearOfIssue, carNumber: cardNumber)
             car = newCar
             delegate?.addNewCar(car: newCar)
