@@ -16,21 +16,9 @@ enum Body: String {
 }
 
 struct Car {
-    var manufacturer: String
-    var model: String
-    var body: Body
-    var yearOfIssue: Int
-    var carNumber: String
-    
-//    init(manufacturer: String,
-//         model: String,
-//         body: Body,
-//         yearOfIssue: Int,
-//         carNumber: String) {
-//        self.yearOfIssue = yearOfIssue
-//        self.manufacturer = manufacturer
-//        self.model = model
-//        self.body = body
-//        self.carNumber = carNumber
-//    }
+     var manufacturer: String
+     var model: String
+     var body: Body
+     var yearOfIssue: Int
+     var carNumber: String
 }

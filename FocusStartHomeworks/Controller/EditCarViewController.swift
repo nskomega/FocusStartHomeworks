@@ -10,6 +10,7 @@ import UIKit
 protocol EditCarViewControllerDelegate {
     func reloadData()
     func addNewCar(car: Car)
+    func updateCar(car: Car, index: Int)
 }
 
 class EditCarViewController: UIViewController {
@@ -18,29 +19,45 @@ class EditCarViewController: UIViewController {
     @IBOutlet weak var modelText: UITextField!
     @IBOutlet weak var yearOfIssueText: UITextField!
     @IBOutlet weak var carNumberText: UITextField!
-    
     @IBOutlet weak var typePikerView: UIPickerView!
-    var car: Car?
+    
+    private var car: Car?
+    private var selectIndex = 0
+    
+    
     var delegate: EditCarViewControllerDelegate?
     
-    var typs: [String] = ["Выберите тип кузова", Body.none.rawValue, Body.jeep.rawValue, Body.sedan.rawValue, Body.cupe.rawValue, Body.universal.rawValue]
+    private var typs: [Body] = [.none, .jeep, .sedan, .cupe, .universal]
     
-    var selectType = Body.none
+    private var selectType = Body.none
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if let car = car {
-//            manufacturerText.text = car.manufacturer
-//            modelText.text = car.model
-////            bodyText.text = car.body
-//            yearOfIssueText.text = String(car.yearOfIssue)
-//            carNumberText.text = car.carNumber
-//        }
-        
-        
+    
         typePikerView.delegate = self
         typePikerView.dataSource = self
+        
+        if let car = car  {
+            manufacturerText.text = car.manufacturer
+            modelText.text = car.model
+            yearOfIssueText.text = String(car.yearOfIssue)
+            carNumberText.text = String(car.carNumber)
+            
+            var index = 0
+            for type in typs {
+                if type == car.body {
+                    typePikerView.selectRow(index, inComponent: 0, animated: true)
+                    selectType = type
+                }
+                index += 1
+            }
+            //manufacturerText.text = car.manufacturer
+        }
+    }
+    
+    func setConfig(car: Car?, selectIndex: Int) {
+        self.car = car
+        self.selectIndex = selectIndex
     }
     
     @IBAction func saveBtn(_ sender: Any) {
@@ -51,12 +68,16 @@ class EditCarViewController: UIViewController {
             let yearOfIssue: Int = Int(yearOfIssueText.text ?? "0") ?? 0
             let cardNumber = carNumberText.text ?? ""
             
+            
             let newCar = Car(manufacturer: manufacturer, model: model, body: selectType, yearOfIssue: yearOfIssue, carNumber: cardNumber)
-            car = newCar
-            delegate?.addNewCar(car: newCar)
+            if car == nil {
+                delegate?.addNewCar(car: newCar)
+            } else {
+                delegate?.updateCar(car: newCar, index: selectIndex)
+            }
+            
             self.navigationController?.popViewController(animated: true)
         }
-
     }
 }
 
@@ -70,10 +91,10 @@ extension EditCarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return typs[row]
+        return typs[row].rawValue
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        selectType = Body(rawValue: typs[row]) ?? Body.none
+        selectType = Body(rawValue: typs[row].rawValue) ?? Body.none
     }
 }
