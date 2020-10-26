@@ -40,18 +40,14 @@ class EditCarViewController: UIViewController {
         if let car = car  {
             manufacturerText.text = car.manufacturer
             modelText.text = car.model
-            yearOfIssueText.text = String(car.yearOfIssue)
-            carNumberText.text = String(car.carNumber)
+            let years = String(car.yearOfIssue ?? 0)
+            yearOfIssueText.text = years
+            carNumberText.text = String(car.carNumber ?? "")
             
-            var index = 0
-            for type in typs {
-                if type == car.body {
-                    typePikerView.selectRow(index, inComponent: 0, animated: true)
-                    selectType = type
-                }
-                index += 1
+            if let index = self.typs.firstIndex(of: car.body) {
+                self.typePikerView.selectRow(index, inComponent: 0, animated: true)
+                self.selectType = self.typs[index]
             }
-            //manufacturerText.text = car.manufacturer
         }
     }
     

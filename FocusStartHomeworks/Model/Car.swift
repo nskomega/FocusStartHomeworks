@@ -19,6 +19,6 @@ struct Car {
      var manufacturer: String
      var model: String
      var body: Body
-     var yearOfIssue: Int
-     var carNumber: String
+     var yearOfIssue: Int?
+     var carNumber: String?
 }

@@ -71,10 +71,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
             if car.yearOfIssue == 0 {
                 title = title + " -"
             } else {
-                title = title + " " + String(car.yearOfIssue)
+                let years = String(car.yearOfIssue ?? 0) ?? "-"
+                title = title + " " + years
             }
-            if car.carNumber.count != 0 {
-                title = title + " " + car.carNumber
+            if car.carNumber?.count != 0 {
+                let number = car.carNumber ?? ""
+                title = title + " " + number
             }
             cell.textLabel?.text = title
         }
