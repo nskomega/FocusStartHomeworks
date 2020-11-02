@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ThreadSafeArray<T: Equatable> {
+class ThreadSafeArray<T> {
     
     private var array: [T] = []
     
