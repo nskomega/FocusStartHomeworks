@@ -7,7 +7,4 @@
    <FileRef
       location = "group:FocusStartHomeworks2.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:FocusStartHomeworks3.xcodeproj">
-   </FileRef>
 </Workspace>
