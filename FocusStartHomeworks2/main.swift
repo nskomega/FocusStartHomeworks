@@ -7,64 +7,34 @@
 
 import Foundation
 
-class MyThreadSafe<T: Equatable>{
-    
-    private var array: [T] = []
-    private let accessQueue = DispatchQueue(label: "SynchronizedArrayAccess", attributes: .concurrent)
-    
-    func append(_ item: T) {
-        accessQueue.async(flags: .barrier) {
-            self.array.append(item)
-        }
-    }
-    
-    func remove(at index: Int) {
-        accessQueue.async (flags: .barrier) {
-            if self.array.count > index {
-                self.array.remove(at: index)
-            }
-        }
-    }
-    
-    func subScript(index: Int) -> T? {
-        if array.count > index {
-            return array[index]
-        } else {
-            return nil
-        }
-    }
-    
-    func contains(_ element: T) -> Bool {
+let myThread = ThreadSafeArray<Int>()
 
-        var result = false
-        for el in array {
-            if el == element {
-                result = true
-            }
-        }
-        return result
+let processGroup = DispatchGroup()
+let backgroundQ = DispatchQueue.global(qos: .utility)
+
+processGroup.enter()
+backgroundQ.async(group: processGroup, execute: {
+    for number in 1...1000 {
+        myThread.append(number)
+        print("   1")
     }
-    
-    func isEmpty() -> Bool {
-        accessQueue.sync {
-            return array.count
-        }
-        return array.isEmpty
+    processGroup.leave()
+})
+
+processGroup.enter()
+backgroundQ.async(group: processGroup, execute: {
+    for number in 1...1000 {
+        myThread.append(number)
+        print("        2")
     }
-    
-    func count() -> Int {
-        return array.count
-    }
-    
-}
+    processGroup.leave()
+})
 
+print("///////////")
 
-let myThread = MyThreadSafe<String>()
+processGroup.notify(queue: DispatchQueue.main, execute: {
+    print("All Done")
+    print("myThread.count()>", myThread.count())
+})
 
-for number in 1...1000 {
-    myThread.append(String(number))
-}
-
-myThread.remove(at: 560)
-
-print("myThread.count()>", myThread.count())
+sleep(10000)
