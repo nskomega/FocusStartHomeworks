@@ -27,32 +27,20 @@ class ThreadSafeArray<T> {
         }
     }
     
-    func subScript(index: UInt) -> T? {
-        accessQueue.sync(flags: .barrier) {
-            if array.count > index {
-                return array[Int(index)]
-            } else {
-                return nil
+    public subscript(index: Int) -> T? {
+        get {
+            var element: T?
+            accessQueue.sync(flags: .barrier) {
+                if array.count > index {
+                    element = self.array[index]
+                }
             }
+            return element
         }
     }
     
-//    func contains(_ element: T) -> Bool {
-//        accessQueue.sync(flags: .barrier) {
-//            var result = false
-//            for el in array {
-//                if el == element {
-//                    result = true
-//                }
-//            }
-//            return result
-//        }
-//    }
-    
     func isEmpty() -> Bool {
-        accessQueue.sync(flags: .barrier) {
-            return array.isEmpty
-        }
+        return array.isEmpty
     }
     
     func count() -> Int {
@@ -65,13 +53,7 @@ class ThreadSafeArray<T> {
 extension ThreadSafeArray where T: Equatable {
     func contains(_ element: T) -> Bool {
         accessQueue.sync(flags: .barrier) {
-            var result = false
-            for el in array {
-                if el == element {
-                    result = true
-                }
-            }
-            return result
+            return array.contains(element)
         }
     }
 }
