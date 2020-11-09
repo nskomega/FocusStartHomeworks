@@ -37,4 +37,11 @@ processGroup.notify(queue: DispatchQueue.main, execute: {
     print("myThread.count()>", myThread.count())
 })
 
-sleep(10000)
+processGroup.wait()
+
+let el = myThread[4]
+
+print(el)
+print("All Done")
+print("myThread.count()>", myThread.count())
+
