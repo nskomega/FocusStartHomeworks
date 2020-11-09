@@ -30,7 +30,7 @@ class ThreadSafeArray<T> {
     public subscript(index: Int) -> T? {
         get {
             var element: T?
-            accessQueue.sync(flags: .barrier) {
+            self.accessQueue.sync {
                 if array.count > index {
                     element = self.array[index]
                 }
@@ -40,20 +40,22 @@ class ThreadSafeArray<T> {
     }
     
     func isEmpty() -> Bool {
-        return array.isEmpty
+        self.accessQueue.sync {
+            return self.array.isEmpty
+        }
     }
     
     func count() -> Int {
-        accessQueue.sync(flags: .barrier) {
-            return array.count
+        accessQueue.sync {
+            return self.array.count
         }
     }
 }
 
 extension ThreadSafeArray where T: Equatable {
     func contains(_ element: T) -> Bool {
-        accessQueue.sync(flags: .barrier) {
-            return array.contains(element)
+        self.accessQueue.sync {
+            return self.array.contains(element)
         }
     }
 }

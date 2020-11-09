@@ -20,26 +20,7 @@
 		8FD2A9212550494E0071A8A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2A9202550494E0071A8A6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8FA5ACB02556FF8D0020109D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FA5ACAC2556FF8D0020109D /* FocusStartHomeworks4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8B4A523D2554480000AE491A;
-			remoteInfo = FocusStartHomeworks4;
-		};
-		8FA5ACB82556FF950020109D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FA5ACB42556FF950020109D /* FocusStartHomeworks4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8B4A523D2554480000AE491A;
-			remoteInfo = FocusStartHomeworks4;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		8FA5ACAC2556FF8D0020109D /* FocusStartHomeworks4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FocusStartHomeworks4.xcodeproj; sourceTree = "<group>"; };
-		8FA5ACB42556FF950020109D /* FocusStartHomeworks4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FocusStartHomeworks4.xcodeproj; sourceTree = "<group>"; };
 		8FD2A8E9255041E90071A8A6 /* FocusStartHomeworks3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusStartHomeworks3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD2A8EC255041E90071A8A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD2A8EE255041E90071A8A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,27 +47,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8FA5ACAD2556FF8D0020109D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8FA5ACB12556FF8D0020109D /* FocusStartHomeworks4.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8FA5ACB52556FF950020109D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8FA5ACB92556FF950020109D /* FocusStartHomeworks4.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8FD2A8E0255041E90071A8A6 = {
 			isa = PBXGroup;
 			children = (
-				8FA5ACAC2556FF8D0020109D /* FocusStartHomeworks4.xcodeproj */,
-				8FA5ACB42556FF950020109D /* FocusStartHomeworks4.xcodeproj */,
 				8FD2A8EB255041E90071A8A6 /* FocusStartHomeworks3 */,
 				8FD2A8EA255041E90071A8A6 /* Products */,
 			);
@@ -180,39 +143,12 @@
 			mainGroup = 8FD2A8E0255041E90071A8A6;
 			productRefGroup = 8FD2A8EA255041E90071A8A6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8FA5ACB52556FF950020109D /* Products */;
-					ProjectRef = 8FA5ACB42556FF950020109D /* FocusStartHomeworks4.xcodeproj */;
-				},
-				{
-					ProductGroup = 8FA5ACAD2556FF8D0020109D /* Products */;
-					ProjectRef = 8FA5ACAC2556FF8D0020109D /* FocusStartHomeworks4.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8FD2A8E8255041E90071A8A6 /* FocusStartHomeworks3 */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8FA5ACB12556FF8D0020109D /* FocusStartHomeworks4.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = FocusStartHomeworks4.app;
-			remoteRef = 8FA5ACB02556FF8D0020109D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8FA5ACB92556FF950020109D /* FocusStartHomeworks4.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = FocusStartHomeworks4.app;
-			remoteRef = 8FA5ACB82556FF950020109D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8FD2A8E7255041E90071A8A6 /* Resources */ = {
