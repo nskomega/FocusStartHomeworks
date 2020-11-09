@@ -30,6 +30,10 @@ class ThreadSafeArray<T> {
     public subscript(index: Int) -> T? {
         get {
             var element: T?
+<<<<<<< HEAD
+            
+=======
+>>>>>>> ad9f8967e34babe271b6b3fa9768a4584323f6e7
             self.accessQueue.sync {
                 if array.count > index {
                     element = self.array[index]
