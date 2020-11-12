@@ -34,14 +34,19 @@ print("///////////")
 
 processGroup.notify(queue: DispatchQueue.main, execute: {
     print("All Done")
-    print("myThread.count()>", myThread.count())
+    print("myThread.count()>", myThread.count)
 })
 
 processGroup.wait()
 
 let el = myThread[4]
 
+if myThread.isEmpty {
+    print("isEmpty")
+} else {
+    print("NOT isEmpty")
+}
+
 print(el)
 print("All Done")
-print("myThread.count()>", myThread.count())
-
+print("myThread.count()>", myThread.count)

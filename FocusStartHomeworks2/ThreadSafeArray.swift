@@ -13,6 +13,18 @@ class ThreadSafeArray<T> {
     
     private let accessQueue = DispatchQueue(label: "SynchronizedArrayAccess", attributes: .concurrent)
     
+    var isEmpty: Bool {
+        get {
+            return array.isEmpty
+        }
+    }
+    
+    var count: Int {
+        get {
+            return array.count
+        }
+    }
+    
     func append(_ item: T) {
         self.accessQueue.async(flags: .barrier) {
             self.array.append(item)
@@ -39,17 +51,6 @@ class ThreadSafeArray<T> {
         }
     }
     
-    func isEmpty() -> Bool {
-        self.accessQueue.sync {
-            return self.array.isEmpty
-        }
-    }
-    
-    func count() -> Int {
-        accessQueue.sync {
-            return self.array.count
-        }
-    }
 }
 
 extension ThreadSafeArray where T: Equatable {
