@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     var loginView = LoginView()
     
     override func viewDidLoad() {
@@ -16,7 +16,5 @@ class LoginViewController: UIViewController {
         
         self.view = loginView
         loginView.configurate()
-        
     }
-
 }

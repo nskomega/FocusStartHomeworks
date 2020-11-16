@@ -16,7 +16,4 @@ class DetailViewController: UIViewController {
         self.view = detailView
         detailView.configurate()
     }
-    
-  
-    
 }

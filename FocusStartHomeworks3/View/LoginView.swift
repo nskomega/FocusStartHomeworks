@@ -8,13 +8,26 @@
 import UIKit
 
 class LoginView: UIView {
+    
+    private enum Constants {
+        static let loginTextFieldText = "Логин"
+        static let passwordTextFieldText = "Пароль"
+        static let doneButtonName = "Готово"
+        static let widthAnchor240: CGFloat = 240
+        static let heightAnchor40: CGFloat = 40
+        static let widthAnchor200: CGFloat = 200
+        static let bottomAnchor16: CGFloat = 16
+        static let bottomAnchor_16: CGFloat = -16
+        static let bottomAnchor64: CGFloat = 64
+        static let topAnchor74: CGFloat = 74
+    }
 
     private var doneButtonNormal:NSLayoutConstraint!
     private var doneButtonBottomAnchorWithKeyboard: NSLayoutConstraint!
     
     let loginTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Логин"
+        textField.placeholder = Constants.loginTextFieldText
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.borderStyle = .roundedRect
         return textField
@@ -22,7 +35,7 @@ class LoginView: UIView {
 
     let passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Пароль"
+        textField.placeholder = Constants.passwordTextFieldText
         textField.textContentType = .password
         textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -32,9 +45,8 @@ class LoginView: UIView {
 
     let doneButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Готово", for: .normal)
+        button.setTitle(Constants.doneButtonName, for: .normal)
         button.backgroundColor = .green
-       // button.layer.cornerRadius = Constants.doneButtonCornerRadius
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -47,20 +59,20 @@ class LoginView: UIView {
         self.addSubview(doneButton)
         
         loginTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        loginTextField.widthAnchor.constraint(equalToConstant: 240).isActive = true
-        loginTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: 74).isActive = true
-        loginTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        loginTextField.widthAnchor.constraint(equalToConstant: Constants.widthAnchor240).isActive = true
+        loginTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.topAnchor74).isActive = true
+        loginTextField.heightAnchor.constraint(equalToConstant: Constants.heightAnchor40).isActive = true
 
         passwordTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        passwordTextField.widthAnchor.constraint(equalToConstant: 240).isActive = true
-        passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 16).isActive = true
-        passwordTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        passwordTextField.widthAnchor.constraint(equalToConstant: Constants.widthAnchor240).isActive = true
+        passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: Constants.bottomAnchor16).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: Constants.heightAnchor40).isActive = true
         
         doneButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        doneButtonNormal = doneButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -64)
+        doneButtonNormal = doneButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constants.bottomAnchor64)
         doneButtonNormal.isActive = true
-        doneButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        doneButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        doneButton.heightAnchor.constraint(equalToConstant: Constants.heightAnchor40).isActive = true
+        doneButton.widthAnchor.constraint(equalToConstant: Constants.widthAnchor200).isActive = true
         
         setupNotifications()
         hideKeyboardWhenTappedAround()
@@ -77,12 +89,11 @@ class LoginView: UIView {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            doneButtonBottomAnchorWithKeyboard = doneButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -keyboardHeight - 16)
+            doneButtonBottomAnchorWithKeyboard = doneButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -keyboardHeight + Constants.bottomAnchor16)
             if doneButtonNormal.isActive {
              doneButtonNormal.isActive = false
              doneButtonBottomAnchorWithKeyboard.isActive = true
             }
-            
         }
     }
     
@@ -105,5 +116,4 @@ class LoginView: UIView {
         doneButtonBottomAnchorWithKeyboard.isActive = false
         }
     }
-    
 }
