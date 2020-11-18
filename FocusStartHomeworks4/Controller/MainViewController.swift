@@ -16,17 +16,25 @@ class MainViewController: UISplitViewController {
         super.viewDidLoad()
 
         let masterNavigationController = UINavigationController(rootViewController: tableViewController)
-        let detailNavigationController = UINavigationController(rootViewController: detailController)
-        
         tableViewController.delegate = self
-        self.viewControllers = [masterNavigationController, detailNavigationController]
+        
+        self.viewControllers = [masterNavigationController]
+        
+        let deviceIdiom = UIScreen.main.traitCollection.userInterfaceIdiom
+        if deviceIdiom == .pad {
+            preferredDisplayMode = .allVisible
+            if tableViewController.list.count > 0 {
+                show(news: tableViewController.list[0])
+            }
+        }
     }
 }
 
-extension MainViewController: MyTableDelegte {
-    func selectData(data: MyData) {
-        self.showDetailViewController(detailController, sender: nil)
-        detailController.setData(myData: data)
+extension MainViewController: IMyTableDelegte {
+    func show(news: News) {
+        let detailNavigationController = UINavigationController(rootViewController: detailController)
+        self.showDetailViewController(detailNavigationController, sender: nil)
+        detailController.setData(news: news)
     }
 }
 
