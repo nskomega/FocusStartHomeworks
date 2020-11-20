@@ -5,20 +5,22 @@
 //  Created by Mikhail Danilov on 11.11.2020.
 //
 
-
 import Foundation
 
 protocol SecondViewModelProtocol: AnyObject {
     func tapBack()
     func saveCar(marka: String, model: String, gosNomer: String)
+    var newCar: ((Car) -> ())? { get set}
 }
 
 class SecondViewModel: SecondViewModelProtocol {
     
     private let router: SecondViewRouterProtocol
     weak var mainViewModel: MainViewModelProtocol?
+    var newCar: ((Car) -> ())?
     
-    init(router: SecondViewRouterProtocol) {
+    init(router: SecondViewRouterProtocol, newCar: ((Car) -> ())? ) {
+        self.newCar = newCar
         self.router = router
     }
     
@@ -28,8 +30,7 @@ class SecondViewModel: SecondViewModelProtocol {
     
     func saveCar(marka: String, model: String, gosNomer: String) {
         let car = Car(marka: marka, model: model, gosNomer: gosNomer)
-        mainViewModel?.save(car: car)
+        newCar?(car)
         router.close()
     }
 }
-

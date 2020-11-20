@@ -7,30 +7,25 @@
 
 import Foundation
 
-protocol MainViewProtocol {
-    func sendNewCar(car: Car)
-}
-
 protocol MainViewModelProtocol: AnyObject {
     func tapMainButton ()
-    func save(car: Car)
-    var delegate: MainViewProtocol? { get set }
+    var newCar: ((Car) -> ())? { get set}
 }
 
 class MainViewModel: MainViewModelProtocol {
     
     private let router: MainViewRouterProtocol
-    var delegate: MainViewProtocol?
+    var newCar: ((Car) -> ())?
     
     init(router: MainViewRouterProtocol) {
         self.router = router
     }
     
     func tapMainButton () {
-        router.showSecondView(mainViewModel: self)
+        router.showSecondView(newCar: newCar)
     }
     
     func save(car: Car) {
-        delegate?.sendNewCar(car: car)
+        newCar?(car)
     }
 }

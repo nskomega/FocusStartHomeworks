@@ -19,13 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if let window = appDelegate.window  {
                 
-                let viewController = MainViewController()
-                let router = MainViewRouter(view: viewController)
-                let viewModel = MainViewModel(router: router)
-                
-                viewController.setup(viewModel: viewModel)
-                
-                let navigationController = UINavigationController(rootViewController: viewController)
+                let vc = ModuleBuilder.mainVC()
+                let navigationController = UINavigationController(rootViewController: vc)
                 navigationController.setNavigationBarHidden(true, animated: false)
                 window.rootViewController = navigationController
                 window.makeKeyAndVisible()

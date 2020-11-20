@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol SecondViewRouterProtocol: class {
+protocol SecondViewRouterProtocol: AnyObject {
     func close()
 }
 

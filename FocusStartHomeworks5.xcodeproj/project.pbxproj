@@ -17,6 +17,9 @@
 		8B565BFF255C47B200171904 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B565BFE255C47B200171904 /* SecondViewModel.swift */; };
 		8B565C02255C47C100171904 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B565C01255C47C100171904 /* SecondViewController.swift */; };
 		8B6494B7255D86820083014B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6494B6255D86820083014B /* Car.swift */; };
+		8F93A6F325680B9F0059BF23 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F93A6F225680B9F0059BF23 /* MainView.swift */; };
+		8F93A6F625680E100059BF23 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F93A6F525680E100059BF23 /* SecondView.swift */; };
+		8F93A6F925680F530059BF23 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F93A6F825680F530059BF23 /* ModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		8B565BFE255C47B200171904 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		8B565C01255C47C100171904 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8B6494B6255D86820083014B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		8F93A6F225680B9F0059BF23 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8F93A6F525680E100059BF23 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		8F93A6F825680F530059BF23 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			children = (
 				8B565BD1255C420200171904 /* Modules */,
 				8B565BBC255C41D800171904 /* AppDelegate.swift */,
+				8F93A6F825680F530059BF23 /* ModuleBuilder.swift */,
 				8B565BCA255C41D900171904 /* Info.plist */,
 				8B565BC5255C41D900171904 /* Assets.xcassets */,
 				8B565BC7255C41D900171904 /* LaunchScreen.storyboard */,
@@ -89,6 +96,7 @@
 				8B565BD3255C422B00171904 /* MainRouter.swift */,
 				8B565BD6255C423900171904 /* MainViewModel.swift */,
 				8B565BD9255C424800171904 /* MainViewController.swift */,
+				8F93A6F225680B9F0059BF23 /* MainView.swift */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -99,6 +107,7 @@
 				8B565BFB255C47A700171904 /* SecondRouter.swift */,
 				8B565BFE255C47B200171904 /* SecondViewModel.swift */,
 				8B565C01255C47C100171904 /* SecondViewController.swift */,
+				8F93A6F525680E100059BF23 /* SecondView.swift */,
 			);
 			path = SecondModule;
 			sourceTree = "<group>";
@@ -181,10 +190,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B565BFC255C47A700171904 /* SecondRouter.swift in Sources */,
+				8F93A6F325680B9F0059BF23 /* MainView.swift in Sources */,
 				8B565BD7255C423900171904 /* MainViewModel.swift in Sources */,
 				8B6494B7255D86820083014B /* Car.swift in Sources */,
+				8F93A6F925680F530059BF23 /* ModuleBuilder.swift in Sources */,
 				8B565BD4255C422B00171904 /* MainRouter.swift in Sources */,
 				8B565BDA255C424800171904 /* MainViewController.swift in Sources */,
+				8F93A6F625680E100059BF23 /* SecondView.swift in Sources */,
 				8B565C02255C47C100171904 /* SecondViewController.swift in Sources */,
 				8B565BFF255C47B200171904 /* SecondViewModel.swift in Sources */,
 				8B565BBD255C41D800171904 /* AppDelegate.swift in Sources */,

@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-protocol MainViewRouterProtocol: class {
-    func showSecondView(mainViewModel: MainViewModelProtocol)
+protocol MainViewRouterProtocol: AnyObject {
+    func showSecondView(newCar: ((Car) -> ())?)
 }
 
 final class MainViewRouter: MainViewRouterProtocol {
@@ -21,15 +21,8 @@ final class MainViewRouter: MainViewRouterProtocol {
         self.view = view
     }
     
-    
-    func showSecondView(mainViewModel: MainViewModelProtocol) {
-        let viewController = SecondViewController()
-        let router = SecondViewRouter(view: viewController)
-        let viewModel = SecondViewModel(router: router)
-        
-        viewController.setup(viewModel: viewModel)
-        viewModel.mainViewModel = mainViewModel
-        
-        self.view?.navigationController?.pushViewController(viewController, animated: true)
+    func showSecondView(newCar: ((Car) -> ())?) {
+        let vc = ModuleBuilder.secondVC(newCar: newCar)
+        self.view?.navigationController?.pushViewController(vc, animated: true)
     }
 }
