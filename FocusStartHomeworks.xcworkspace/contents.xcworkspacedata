@@ -16,4 +16,7 @@
    <FileRef
       location = "group:/Users/om/Desktop/Project/CFT/FocusStartHomeworks/FocusStartHomeworks5.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:FocusStartHomeworks6.xcodeproj">
+   </FileRef>
 </Workspace>
