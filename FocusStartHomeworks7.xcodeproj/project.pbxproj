@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F30480625767BBF00426AF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30480525767BBF00426AF2 /* AppDelegate.swift */; };
+		8F30480A25767BBF00426AF2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30480925767BBF00426AF2 /* MainViewController.swift */; };
+		8F30480F25767BC100426AF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F30480E25767BC100426AF2 /* Assets.xcassets */; };
+		8F30481225767BC100426AF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F30481025767BC100426AF2 /* LaunchScreen.storyboard */; };
+		8F30481E25767C6100426AF2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F30481D25767C6100426AF2 /* ImageTableViewCell.swift */; };
+		BB9C5E88374F012F97123ACB /* Pods_FocusStartHomeworks7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80C36709DB33247339B3385 /* Pods_FocusStartHomeworks7.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E303CAF84B6D9FC2BD0E306 /* Pods-FocusStartHomeworks7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusStartHomeworks7.release.xcconfig"; path = "Target Support Files/Pods-FocusStartHomeworks7/Pods-FocusStartHomeworks7.release.xcconfig"; sourceTree = "<group>"; };
+		4641CDC810DB0AE29BBB4E3A /* Pods-FocusStartHomeworks7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusStartHomeworks7.debug.xcconfig"; path = "Target Support Files/Pods-FocusStartHomeworks7/Pods-FocusStartHomeworks7.debug.xcconfig"; sourceTree = "<group>"; };
+		8F30480225767BBF00426AF2 /* FocusStartHomeworks7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusStartHomeworks7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F30480525767BBF00426AF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F30480925767BBF00426AF2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8F30480E25767BC100426AF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F30481125767BC100426AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F30481325767BC100426AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F30481D25767C6100426AF2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		F80C36709DB33247339B3385 /* Pods_FocusStartHomeworks7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusStartHomeworks7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F3047FF25767BBF00426AF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9C5E88374F012F97123ACB /* Pods_FocusStartHomeworks7.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1669AE5546E3DEC7E6A4FF9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4641CDC810DB0AE29BBB4E3A /* Pods-FocusStartHomeworks7.debug.xcconfig */,
+				0E303CAF84B6D9FC2BD0E306 /* Pods-FocusStartHomeworks7.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1A3B8A26D835336988580562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F80C36709DB33247339B3385 /* Pods_FocusStartHomeworks7.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F3047F925767BBF00426AF2 = {
+			isa = PBXGroup;
+			children = (
+				8F30480425767BBF00426AF2 /* FocusStartHomeworks7 */,
+				8F30480325767BBF00426AF2 /* Products */,
+				1669AE5546E3DEC7E6A4FF9C /* Pods */,
+				1A3B8A26D835336988580562 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8F30480325767BBF00426AF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F30480225767BBF00426AF2 /* FocusStartHomeworks7.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F30480425767BBF00426AF2 /* FocusStartHomeworks7 */ = {
+			isa = PBXGroup;
+			children = (
+				8F30480525767BBF00426AF2 /* AppDelegate.swift */,
+				8F30480925767BBF00426AF2 /* MainViewController.swift */,
+				8F30481D25767C6100426AF2 /* ImageTableViewCell.swift */,
+				8F30480E25767BC100426AF2 /* Assets.xcassets */,
+				8F30481025767BC100426AF2 /* LaunchScreen.storyboard */,
+				8F30481325767BC100426AF2 /* Info.plist */,
+			);
+			path = FocusStartHomeworks7;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F30480125767BBF00426AF2 /* FocusStartHomeworks7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F30481625767BC100426AF2 /* Build configuration list for PBXNativeTarget "FocusStartHomeworks7" */;
+			buildPhases = (
+				E549E1612C2F0DD0839D7D13 /* [CP] Check Pods Manifest.lock */,
+				8F3047FE25767BBF00426AF2 /* Sources */,
+				8F3047FF25767BBF00426AF2 /* Frameworks */,
+				8F30480025767BBF00426AF2 /* Resources */,
+				3BD669F60A8C88E104CFB7D8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FocusStartHomeworks7;
+			productName = FocusStartHomeworks7;
+			productReference = 8F30480225767BBF00426AF2 /* FocusStartHomeworks7.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F3047FA25767BBF00426AF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					8F30480125767BBF00426AF2 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 8F3047FD25767BBF00426AF2 /* Build configuration list for PBXProject "FocusStartHomeworks7" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F3047F925767BBF00426AF2;
+			productRefGroup = 8F30480325767BBF00426AF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F30480125767BBF00426AF2 /* FocusStartHomeworks7 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F30480025767BBF00426AF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F30481225767BC100426AF2 /* LaunchScreen.storyboard in Resources */,
+				8F30480F25767BC100426AF2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BD669F60A8C88E104CFB7D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FocusStartHomeworks7/Pods-FocusStartHomeworks7-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FocusStartHomeworks7/Pods-FocusStartHomeworks7-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FocusStartHomeworks7/Pods-FocusStartHomeworks7-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E549E1612C2F0DD0839D7D13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FocusStartHomeworks7-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F3047FE25767BBF00426AF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F30481E25767C6100426AF2 /* ImageTableViewCell.swift in Sources */,
+				8F30480A25767BBF00426AF2 /* MainViewController.swift in Sources */,
+				8F30480625767BBF00426AF2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8F30481025767BC100426AF2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F30481125767BC100426AF2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F30481425767BC100426AF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F30481525767BC100426AF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F30481725767BC100426AF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4641CDC810DB0AE29BBB4E3A /* Pods-FocusStartHomeworks7.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FKJRTB74YX;
+				INFOPLIST_FILE = FocusStartHomeworks7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.danilovma.FocusStartHomeworks7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F30481825767BC100426AF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E303CAF84B6D9FC2BD0E306 /* Pods-FocusStartHomeworks7.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FKJRTB74YX;
+				INFOPLIST_FILE = FocusStartHomeworks7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.danilovma.FocusStartHomeworks7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F3047FD25767BBF00426AF2 /* Build configuration list for PBXProject "FocusStartHomeworks7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F30481425767BC100426AF2 /* Debug */,
+				8F30481525767BC100426AF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F30481625767BC100426AF2 /* Build configuration list for PBXNativeTarget "FocusStartHomeworks7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F30481725767BC100426AF2 /* Debug */,
+				8F30481825767BC100426AF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F3047FA25767BBF00426AF2 /* Project object */;
+}
