@@ -2,14 +2,18 @@
 # platform :ios, '9.0'
 
 workspace 'FocusStartHomeworks.xcworkspace'
-project 'FocusStartHomeworks7.xcodeproj'
+project 'FocusStartHomeworks8.xcodeproj'
 
-target 'FocusStartHomeworks7' do
+target 'FocusStartHomeworks8' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for FocusStartHomeworks7
-  pod 'Alamofire'
-  pod 'AlamofireImage', '~> 4.1'
+  # Pods for FocusStartHomeworks8
+pod 'Alamofire'
+pod 'AlamofireImage', '~> 4.1'
+pod 'SnapKit', '~> 5.0.0'
+pod 'RealmSwift'
+pod 'RxSwift', '~> 5'
+pod 'RxCocoa', '~> 5'
 
 end
