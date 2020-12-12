@@ -23,6 +23,9 @@
       location = "group:FocusStartHomeworks7.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:FocusStartHomeworks8.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
